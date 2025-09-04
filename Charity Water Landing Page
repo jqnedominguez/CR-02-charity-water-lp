@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity:Water</title>
+  <style>
+    /* Basic page styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #a35a35; /* warm brown */
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #000;
+    }
+
+    .logo img {
+      height: 30px; /* Makes the logo image small and neat */
+      margin-right: 10px; /* Adds space between the image and text */
+    }
+
+    /* Donate button styles */
+    .donate-btn {
+      background-color: #ffcf2d;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .donate-btn:hover {
+      background-color: #e0b824;
+    }
+
+    /* Hero section styles */
+    .hero {
+      /* This sets the background image for the hero section.
+         The image will cover the whole section and be centered. */
+      background: url('img/charity-water-social-preview.jpeg') center center / cover no-repeat;
+      min-height: 100vh; /* Fill the whole browser window */
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    /* Content box inside hero section */
+    .hero-content {
+      background: rgba(0, 32, 64, 0.9); /* dark navy overlay */
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin-left: 40px;
+    }
+
+    .hero-content h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      background-color: #ffcf2d;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      background-color: #e0b824;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 768px) {
+      .hero {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-content {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with logo and donate button -->
+  <header>
+    <div class="logo">
+      <!-- Logo image for the top left. Make sure the file exists in the img folder. -->
+      <img src="img/water-can-transparent.png" alt="Charity Water Logo">
+      Charity:Water
+    </div>
+    <button class="donate-btn">Donate</button>
+  </header>
+
+  <!-- Hero section with background image and call to action -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your $10 Can Change Someone’s Future</h1>
+      <p>100% of your gift funds clean water projects, with updates that show real impact.</p>
+      <button class="cta-btn">Change Someone's Life</button>
+    </div>
+  </section>
+</body>
+</html>
