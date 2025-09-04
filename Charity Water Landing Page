@@ -28,7 +28,7 @@
       align-items: center;
       font-weight: bold;
       font-size: 18px;
-      color: #000;
+      color: #fff; /* Make logo text white for better contrast */
     }
 
     .logo img {
@@ -48,6 +48,12 @@
 
     .donate-btn:hover {
       background-color: #e0b824;
+    }
+
+    /* Add spacing below header */
+    .spacer {
+      height: 10px;
+      background: transparent;
     }
 
     /* Hero section styles */
@@ -116,6 +122,9 @@
     </div>
     <button class="donate-btn">Donate</button>
   </header>
+
+  <!-- Spacer for a little space below the header -->
+  <div class="spacer"></div>
 
   <!-- Hero section with background image and call to action -->
   <section class="hero">
