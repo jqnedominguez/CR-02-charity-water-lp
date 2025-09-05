@@ -73,6 +73,7 @@
       border-radius: 12px;
       max-width: 400px;
       margin-left: 40px;
+      position: relative; /* Added position relative for confetti */
     }
 
     .hero-content h1 {
@@ -97,6 +98,25 @@
 
     .cta-btn:hover {
       background-color: #e0b824;
+    }
+
+    /* Confetti styles for beginners */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ffcf2d;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 100;
+      animation: confetti-fall 1s linear forwards;
+    }
+
+    @keyframes confetti-fall {
+      to {
+        transform: translateY(200px) scale(1.5) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     /* Responsive styles for mobile */
@@ -129,8 +149,27 @@
     <div class="hero-content">
       <h1>Your $10 Can Change Someone’s Future</h1>
       <p>100% of your gift funds clean water projects, with updates that show real impact.</p>
-      <button class="cta-btn">Change Someone's Life</button>
+      <button class="cta-btn" id="confetti-btn">Change Someone's Life</button>
+      <!-- Confetti will be added here by JavaScript -->
     </div>
   </section>
+  <script>
+    // Beginner-friendly confetti effect
+    document.getElementById('confetti-btn').addEventListener('click', function () {
+      const heroContent = this.parentElement;
+      for (let i = 0; i < 20; i++) { // 20 confetti pieces
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        // Random position around the button
+        confetti.style.left = (120 + Math.random() * 80) + 'px';
+        confetti.style.top = (60 + Math.random() * 20) + 'px';
+        // Random color for fun
+        confetti.style.background = ['#ffcf2d', '#a35a35', '#00bfff', '#ff69b4', '#32cd32'][Math.floor(Math.random() * 5)];
+        heroContent.appendChild(confetti);
+        // Remove confetti after animation
+        setTimeout(() => confetti.remove(), 1000);
+      }
+    });
+  </script>
 </body>
 </html>
